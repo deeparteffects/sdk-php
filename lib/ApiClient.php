@@ -245,9 +245,10 @@ class ApiClient
             $request = new Request($method, $url, $headerParams, $postData);
             $credentials = new Credentials($access_key, $secret_key);
             $sign = $sign->signRequest($request, $credentials);
-            $headers = $sign->getHeaders();
+            $signed_headers = $sign->getHeaders();
 
-            foreach ($headers as $key => $val) {
+            $headers = [];
+            foreach ($signed_headers as $key => $val) {
                 $headers[] = "$key: $val[0]";
             }
         }
