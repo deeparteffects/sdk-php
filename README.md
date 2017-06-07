@@ -106,12 +106,6 @@ Class | Method | HTTP request | Description
 - **API key parameter name**: x-api-key
 - **Location**: HTTP header
 
-## sigv4
-
-- **Type**: API key
-- **API key parameter name**: Authorization
-- **Location**: HTTP header
-
 
 ## Author
 Deep Art Effects GmbH
