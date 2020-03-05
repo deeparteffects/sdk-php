@@ -58,7 +58,7 @@ class UploadRequest implements ArrayAccess
         'image_base64_encoded' => 'string',
         'image_size' => 'int',
         'partner_id' => 'string',
-        'optimize_for_print' => 'bool'
+        'optimize_for_print' => 'bool',
         'use_original_colors' => 'bool'
     ];
 
@@ -293,7 +293,7 @@ class UploadRequest implements ArrayAccess
      */
     public function setUseOriginalColors($use_original_colors)
     {
-        $this->container['$use_original_colors'] = $use_original_colors;
+        $this->container['use_original_colors'] = $use_original_colors;
         return $this;
     }
     
