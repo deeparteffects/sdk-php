@@ -58,7 +58,8 @@ class UploadRequest implements ArrayAccess
         'image_base64_encoded' => 'string',
         'image_size' => 'int',
         'partner_id' => 'string',
-        'optimize_for_print' => 'bool'
+        'optimize_for_print' => 'bool',
+        'use_original_colors' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class UploadRequest implements ArrayAccess
         'image_base64_encoded' => 'imageBase64Encoded',
         'image_size' => 'imageSize',
         'partner_id' => 'partnerId',
-        'optimize_for_print' => 'optimizeForPrint'
+        'optimize_for_print' => 'optimizeForPrint',
+        'use_original_colors' => 'useOriginalColors'
     ];
 
 
@@ -88,7 +90,8 @@ class UploadRequest implements ArrayAccess
         'image_base64_encoded' => 'setImageBase64Encoded',
         'image_size' => 'setImageSize',
         'partner_id' => 'setPartnerId',
-        'optimize_for_print' => 'setOptimizeForPrint'
+        'optimize_for_print' => 'setOptimizeForPrint',
+        'use_original_colors' => 'setUseOriginalColors'
     ];
 
 
@@ -101,7 +104,8 @@ class UploadRequest implements ArrayAccess
         'image_base64_encoded' => 'getImageBase64Encoded',
         'image_size' => 'getImageSize',
         'partner_id' => 'getPartnerId',
-        'optimize_for_print' => 'getOptimizeForPrint'
+        'optimize_for_print' => 'getOptimizeForPrint',
+        'use_original_colors' => 'getUseOriginalColors'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class UploadRequest implements ArrayAccess
         $this->container['image_size'] = isset($data['image_size']) ? $data['image_size'] : null;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['optimize_for_print'] = isset($data['optimize_for_print']) ? $data['optimize_for_print'] : null;
+        $this->container['use_original_colors'] = isset($data['use_original_colors']) ? $data['use_original_colors'] : null;
     }
 
     /**
@@ -271,6 +276,27 @@ class UploadRequest implements ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets use_original_colors
+     * @return bool
+     */
+    public function getUseOriginalColors()
+    {
+        return $this->container['use_original_colors'];
+    }
+
+    /**
+     * Sets use_original_colors
+     * @param bool use_original_colors Use this flag to get an artwork that uses the base image's original colors.
+     * @return $this
+     */
+    public function setUseOriginalColors($use_original_colors)
+    {
+        $this->container['use_original_colors'] = $use_original_colors;
+        return $this;
+    }
+    
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
